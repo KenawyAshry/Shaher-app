@@ -1,0 +1,89 @@
+$main-color: #7857fe;
+$color-1: #e91e63;
+$color-2: #f5ae10;
+$color-3: #09d69c;
+$bg-dark: #2b2c2f;
+$main-to-dark-color: $main-color;
+$dark-to-main-color: $bg-dark;
+$shadow-black-100: 0 5px 15px rgba(0,0,0,0.1);
+$shadow-black-300: 0 5px 15px rgba(0,0,0,0.3);
+$black-900: #000000;
+$black-400: #555555;
+$black-100: #f7f7f7;
+$black-000: #ffffff;
+$black-alpha-100: rgba(0,0,0,0.05);
+
+
+
+
+
+body.dark,
+    body.dark > *{
+        background-color: $bg-dark !important;
+        color: #ffffff !important;
+        $black-100: $bg-dark !important;
+        $black-000: $bg-dark !important;
+        $main-to-dark-color: $bg-dark !important;
+        $dark-to-main-color: $main-color !important;
+        $shadow-black-100: $shadow-black-300 !important;
+        $black-alpha-100: rgba(255,255,255,0.05) !important;
+        $black-900: #ffffff !important;
+        $black-400: #bbbbbb !important;
+
+        h1,h2,h3,h4{
+            color: #ffffff;
+        }
+        .queries__box--body{
+            background-color: $bg-dark;
+        }
+        input,textarea{
+            background-color: $bg-dark;
+
+            &:focus{
+                background-color: $bg-dark;
+            }
+        }
+        .team__carousel--item{
+            background-color: $bg-dark;
+        }
+        .plans__propertes::after{
+            background-color: #555555;
+            opacity: .2;
+        }
+        .plans__propertes{
+            color: #bbbbbb;
+        }
+        .testimonials__carousel--item{
+            background-color: $bg-dark;
+        }
+        .download__box{
+            background-color: $bg-dark;
+        }
+        .loader__inner{
+            background-color: $main-color;
+        }
+        .download {background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url(../img/download-app-bg.jpg);}
+    }
+
+    //////////////////////////////loader
+
+.loader{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: $main-to-dark-color;
+    z-index: 99999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__inner{
+        width: 5rem;
+        height: 5rem;
+        background-color: $dark-to-main-color;
+        border-radius: 50%;
+        animation: zoomIn_1 1s linear infinite;
+    }
+}

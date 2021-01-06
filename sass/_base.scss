@@ -1,0 +1,140 @@
+////////////////// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+////////////////
+@mixin respond($breakpoint) {
+    @if $breakpoint == phone {
+        @media only screen and (max-width: 37.5em) { @content };    //600px
+    }
+    @if $breakpoint == tab-port {
+        @media only screen and (max-width: 56.25em) { @content };     //900px
+    }
+    @if $breakpoint == tab-land {
+        @media only screen and (max-width: 75em) { @content };    //1200px
+    }
+    @if $breakpoint == big-desktop {
+        @media only screen and (min-width: 112.5em) { @content };    //1800
+    }
+}
+
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    outline: none !important;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; //  10px / 16px = 62.5 -> 1rem = 10px
+
+    /////
+    @include respond(tab-land) { // width < 1200?
+        font-size: 56.25%; //1 rem = 9px, 9/16 = 50%
+    }
+
+    @include respond(tab-port) { // width < 900?
+        font-size: 50%; //1 rem = 8px, 8/16 = 50%
+    }
+    
+    @include respond(big-desktop) {
+        font-size: 75%; //1rem = 12, 12/16
+    }
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    overflow-x: hidden;
+    background-color: #ffffff;
+    line-height: 1.5;
+    min-height: 500rem;
+}
+img {
+    max-width: 100%;
+    vertical-align: middle;
+}
+ul {
+    list-style: none;
+}
+
+
+
+
+
+
+.tggler-theme {
+    width: 4rem;
+    height: 4rem;
+    background-color: $black-900;
+    position: fixed;
+    top: 30rem;
+    right: 1rem;
+    z-index: 999;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: $shadow-black-300;
+
+    i{
+        line-height: 4rem;
+        color: $black-000;
+    }
+}
+// //////////////////////Navbar
+// ---------------------
+.navbar {
+    padding: 20px 0;
+    background-color: transparent;
+    transition: all 0.5s ease;
+
+    &.navbar-shrink {
+        box-shadow: 0 10px 10px rgba(#000 , 0.1);
+        background-color: $main-color;
+        padding: 10px 0;
+    }
+
+
+
+    .navbar > .container {
+        padding: 0 1.5rem;
+    }
+    
+        .navbar-brand {
+        font-size: 3rem;
+        color: #ffffff;
+        font-weight: 500;
+        text-transform: capitalize;
+    }
+        .nav-item{
+            margin-left: 40px;
+
+            .nav-link{
+                color: #ffffff;
+                font-size: 1.6rem;
+                text-transform: capitalize;
+                font-weight: 400;
+                padding: 5px 0 ;
+                position: relative;
+
+            &::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                height: 1px;
+                background-color: #ffffff;
+                transition: all 0.5s ease;
+                transform: scale(0);
+            }
+            &.active::before,
+            &:hover::before {
+                transform: scale(1);
+            }
+        }
+    }
+}

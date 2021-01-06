@@ -1,0 +1,54 @@
+.heading-1 {
+    font-size: 4.5rem;
+    font-weight: 700;
+}
+.btn-1 {
+    padding: 1.2rem 3rem;
+    border: none;
+    color: $main-color;
+    font-size: 1.6rem;
+    text-transform: capitalize;
+    border-radius: 3rem;
+    transition: all 0.5s ease;
+    box-shadow: $shadow-black-300;
+    font-weight: 500;
+
+    &:focus{
+        box-shadow: $shadow-black-300;
+    }
+    &:hover {
+        color: #ffffff;
+        background-color: $main-color !important;
+    }
+}
+.btn-2{
+    padding: 1rem 2rem;
+    text-decoration: none;
+    color: $black-000;
+    background-color: $main-color;
+    text-transform: capitalize;
+    transition: all 0.5s ease;
+    font-weight: 500;
+    border-radius: 3rem;
+    text-decoration: none !important;
+    box-shadow: $shadow-black-100;
+
+    &:focus {
+        box-shadow: $shadow-black-100;
+    }
+    &:hover {
+        background-color: $black-100;
+        color: $main-color;
+    }
+}
+.heading-2{
+    text-transform: capitalize;
+    font-weight: 700;
+    font-size: 4rem;
+    color: $black-900;
+    text-align: center;
+
+    span{
+        color: $main-color;
+    }
+}

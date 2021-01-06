@@ -1,0 +1,442 @@
+.home {
+    background-color: $main-to-dark-color;
+    min-height: calc(100vh - 91.25px);
+    border-bottom-right-radius: 20rem;
+    padding: 15rem 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+
+    &__heading {
+        color: #ffffff;
+        text-align: left;
+        margin: 0 0 2rem;
+    }
+
+    &__parag{
+        font-size: 1.8rem;
+        line-height: 2.8rem;
+        color: #ffffff;
+        text-align: left;
+        font-weight: 300;
+        margin: 0;
+    }
+
+    &__btn{
+        text-align: left;
+
+        
+        .btn {
+            background-color: #ffffff;
+            margin-top: 4rem;
+        }
+
+        .video-play-btn {
+            margin-left: 3rem;
+            height: 5rem;
+            width: 5rem;
+            padding: 0;
+            font-size: 1.6rem;
+            animation: pulse_01 2s ease infinite;
+
+            i{
+                line-height: 5rem;
+            }
+
+            &:hover{
+                animation: none;
+                box-shadow: $shadow-black-300;
+            }
+        }
+    }
+
+    &__img{
+        position: relative;
+
+        img{
+            max-width: 250px;
+            box-shadow: $shadow-black-100;
+            border-radius: 3.2rem;
+            animation: bounceTop_01 3s ease infinite;
+        }
+
+        &--circle {
+            position: absolute;
+            z-index: 1;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 40rem;
+            height: 40rem;
+            border-radius: 50%;
+            border: 1px solid rgba(#ffffff,  0.2);
+
+
+            &::before {
+                content: '';
+                position: absolute;
+                width: 6rem;
+                height: 6rem;
+                border-radius: 50%;
+                background-color: rgba(#ffffff,  0.4);
+                left: 30px;
+                top: 30px;
+                transform-origin: 17rem 17rem;
+                animation: spin_01 10s linear infinite;
+            }
+        }
+    }
+}
+
+////////////////////////////////////////// Section Facts
+////////////////////////
+.facts{
+    padding: 6rem 0;
+    background-color: $black-100;
+
+
+
+
+
+    &__img{
+        padding: 3.5rem;
+
+        img{
+            max-width: 20rem;
+            box-shadow: $shadow-black-100;
+            animation: bounceTop_01 5s linear infinite;
+            border-radius: 2.2rem;
+        }
+    }
+
+    &__info{
+        padding: 3rem;
+    }
+    &__heading{
+        font-size: 3rem;
+        text-align: left;
+        margin-bottom: 1.5rem;
+    }
+    &__text{
+            font-size: 1.6rem;
+            line-height: 2.6rem;
+            font-weight: 300;
+            color: $black-400;
+            margin-bottom: 3rem;
+    }
+
+    &__boxs{
+        display: grid;
+        grid-template-columns: repeat(2, 25rem);
+        justify-content: flex-start;
+        grid-gap: 2rem;
+
+        .box1{background-color: $color-1;}
+        .box2{background-color: $color-2;}
+        .box3{background-color: $color-3;}
+        .box4{background-color: $main-color;}
+    }
+    &__box{
+        border-radius: .5rem;
+        padding: 2rem 0;
+        text-align: center;
+        color: #ffffff;
+        box-shadow: $shadow-black-100;
+
+        .number {
+            font-size: 3rem;
+            font-weight: 700;
+        }
+        p{
+            text-transform: uppercase;
+            font-weight: 100;
+            padding: .5rem 0;
+        }
+    }
+}
+
+////////////////////////////////////////// Section Download App
+////////////////////////
+.download {
+    padding: 8rem 0;
+    background-image: linear-gradient(rgba($main-color, 0.8), rgba($main-color, 0.8)), url(../img/download-app-bg.jpg);
+    background-size: cover;
+    min-height: 100vh;
+    // background-attachment: fixed;
+
+    .heading-2{
+        color: #ffffff;
+    }
+
+    &__box{
+        padding: 2rem;
+        text-align: center;
+        background-color: $black-100;
+        border-radius: 1rem;
+        box-shadow: $shadow-black-300;
+    }
+
+    &__icon{
+        width: 6rem;
+        height: 6rem;
+        // background-color: orangered;
+        margin: 0 auto 1rem;
+        text-align: center;
+        font-size: 3rem;
+        position: relative;
+        transition: all .5s ease;
+        z-index: 1;
+        color: $main-color;
+
+        &::before {
+            content: '';
+            width: 100%;
+            height: 100%;
+            background-color: $main-to-dark-color;
+            position: absolute;
+            left: 100%;
+            transition: all .5s ease;
+            z-index: -1;
+            opacity: 0;
+        }
+
+
+        i{
+            line-height: 6rem;
+        }
+    }
+
+    &__title{
+        color: $black-900;
+        padding-bottom: 2rem;
+        font-size: 2.4rem;
+    }
+
+    &__text{
+        color: $black-400;
+        font-size: 1.6rem;
+        line-height: 2.6rem;
+    }
+
+    &__btn{
+        margin: 1rem 0 !important;
+        display: inline-block;
+    }
+    &__box:hover &__icon::before{
+        left: 0;
+        border-radius: 50%;
+        opacity: 1;
+    }
+    &__box:hover &__icon {
+        color: $black-000;
+        font-size: 2rem;
+    }
+}
+
+
+////////////////////////////////////////// Section How it Works
+////////////////////////
+.howWork {
+    padding: 8rem 0;
+
+
+    &__box{
+        // background-color: orangered;
+        text-align: center;
+        position: relative;
+        // padding: 1.6rem;
+    }
+
+    &__step{
+        width: 5rem;
+        height: 5rem;
+        background-color: $main-color;
+        border-radius: 50%;
+        margin: 0 auto 2rem;
+        text-align: center;
+        color: $black-000;
+        font-size: 2.4rem;
+        position: relative;
+
+        span{
+            line-height: 5rem;
+        }
+    }
+
+    &__title{
+        color: $black-900;
+        font-size: 2.2rem;
+        font-weight: 500;
+        margin: 1.5rem 0;
+    }
+
+    &__text{
+        color: $black-400;
+        line-height: 2.6rem;
+    }
+    &__box.line-right::before {
+        content: '';
+        position: absolute;
+        height: 2px;
+        width: 102%;
+        left: 50%;
+        top: 24px;
+        background-color: #7857fe;
+        z-index: -1;
+    }
+}
+
+////////////////////////////////////////// Section Queries Style
+////////////////////////
+.queries {
+    padding: 8rem 0;
+
+
+    &__title{
+        margin-bottom: 4rem;
+    }
+
+    &__box{
+        margin: 1rem 0;
+        box-shadow: $shadow-black-100;
+
+
+
+        &--head {
+            display: flex;
+            justify-content: space-between;
+            padding: 1.5rem;
+            cursor: pointer;
+            align-items: center;
+            transition: All .2s ease;
+
+            &.active{
+                background-color: $main-color;
+                color: $black-000;
+            }
+        }
+        &--body {
+            background-color: $black-100;
+            padding: 0rem;
+            height: 0rem;
+            text-align: left;
+            height: 0;
+            overflow: hidden;
+            transition: all .3s ease;
+            
+
+            &.active {
+                height: 10rem;
+                padding: 1.5rem;
+                padding-bottom: 0;
+            }
+
+            p{
+                font-size: 1.6rem;
+                font-weight: 300;
+                line-height: 2.6rem;
+                margin: 0;
+            }
+        }
+    }
+}
+
+
+////////////////////////////////////////// Section Contact Style
+////////////////////////
+.contact{
+    padding: 8rem 0;
+    background-color: $black-100;
+    min-height: 100vh;
+
+    &__info{
+        padding: 2rem;
+    }
+    &__headind{
+        font-size: 2rem;
+        font-weight: 500;
+        color: $black-900;
+        margin-bottom: 6rem;
+        text-transform: capitalize;
+    }
+
+    &__infoInner{
+        display: flex;
+        align-items: center;
+
+        &:not(:last-child){
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__icon{
+        margin-right: 2rem;
+        width: 4rem;
+        height: 4rem;
+        background-color: transparent;
+        border: 1px solid $main-color;
+        text-align: center;
+        color: $main-color;
+        margin-top: -2rem;
+        border-radius: 50%;
+        font-size: 1.6rem;
+
+        i{
+            line-height: 4rem;
+        }
+    }
+
+    &__innerInfo{
+
+        h4{
+            color: $black-900;
+            font-size: 1.8rem;
+            font-weight: 400;
+        }
+        p{
+            font-weight: 200;
+            font-size: 1.6rem;
+        }
+    }
+
+    &__form{
+        padding: 2rem;
+    }
+
+    &__inputGroup{
+        display: flex;
+        justify-content: space-between;
+
+
+        input,textarea{
+            width: 49%;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 2rem;
+            box-shadow: $shadow-black-100;
+        }
+
+
+
+        &:not(:first-of-type){
+            input,textarea{
+                width: 100%;
+            }
+        }
+        &:not(:last-of-type){
+            margin-bottom: 2rem;
+        }
+        textarea{
+            height: 15rem !important;
+        }
+    }
+    &__btn{
+        display: inline-block;
+        margin: 2rem 0;
+    }
+    .form-control{
+        font-size: 1.6rem !important;
+        height: auto !important;
+    }
+}

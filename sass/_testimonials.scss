@@ -1,0 +1,189 @@
+.testimonials {
+    padding: 8rem 0;
+    background-color: $black-100;
+    // min-height: 100vh;
+
+    &__carousel {
+        margin-top: 4rem;
+
+        &--item {
+            padding: 2rem;
+            text-align: center;
+            background-color: $black-100;
+            margin: 1.5rem;
+            box-shadow: $shadow-black-100;
+            border-radius: 1rem;
+        }
+    }
+    &__img{
+        position: relative;
+
+        img{
+            width: 100%;
+            max-width: 10rem;
+            border-radius: 50%;
+            border: 4px solid $main-color;
+            display: inline-block;
+            margin: 0 auto 2rem;
+        }
+        i{
+            display: inline-block;
+            width: 3rem;
+            height: 3rem;
+            background-color: $main-color;
+            color: $black-000;
+            position: absolute;
+            top: 35%;
+            left: 60%;
+            line-height: 3rem;
+            border-radius: 50%;
+            font-size: 1.4rem;
+        }
+    }
+
+    &__text{
+        color: $black-400;
+        line-height: 2.6rem;
+        font-size: 1.6rem;
+        font-weight: 300;
+    }
+    
+    &__name{
+        color: $black-900;
+        margin-top: 2rem;
+    }
+    
+    &__jop{
+        color: $black-400;
+        font-size: 1.6rem;
+        font-weight: 300;
+    }
+    
+    &__stars{
+        color: $color-2;
+        margin-top: 1rem;
+        font-size: 1.4rem;
+    }
+}
+
+////////////////////////////////////////////////////////
+//////////////////////// Pricing Plan Style
+.plans{
+    padding: 8rem 0;
+    min-height: 100vh;
+
+    &__planBox{
+        padding: 2rem 0;
+        box-shadow: $shadow-black-100;
+        border-radius: 5px;
+        margin-top: 5rem;
+    }
+
+    &__kind{
+        text-align: center;
+        color: $black-900;
+        font-weight: 700;
+        font-size: 2.4rem;
+        
+    }
+
+    &__line{
+        width: 100%;
+        display: block;
+        margin: 1rem 0;
+        opacity: .5;
+    }
+    
+    &__price{
+        margin: 2rem 0;
+        display: flex;
+        position: relative;
+        justify-content: center;
+
+        &--present{
+            font-size: 1.3rem;
+            position: absolute;
+            top: 9%;
+            left: 35%;
+        }
+        &--present.one{
+            left: 39%;
+        }
+        &--num{
+            font-size: 5rem;
+            color: $main-color;
+            font-weight: 700;
+        }
+        &--time{
+            font-size: 1rem;
+            position: absolute;
+            bottom: 20%;
+            left: 63%;
+            text-transform: uppercase;
+        }
+    }
+    
+    &__list{
+        padding: 2rem;
+    }
+    
+    &__propertes{
+        color: $black-400;
+        font-weight: 300;
+        letter-spacing: 1px;
+        line-height: 2.3;
+        font-size: 1.4rem;
+        margin-bottom: 5px;
+
+        i{
+            margin-right: 1rem;
+            color: $main-color;
+        }
+
+        &:not(:last-child):after{
+            display: block;
+            content: '';
+            width: 100%;
+            height: 1px;
+            background-color: $black-100;
+            // opacity: .5;
+        }
+    }
+    
+    &__btn{
+        margin-top: 2rem;
+        margin-left: -1rem;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+}
+/////////////////////////////////////////@at-root
+////////////////////// Team Member Style
+.team {
+    padding: 8rem 0;
+    background-color: $black-100;
+
+    &__carousel{
+        margin-top: 5rem;
+
+        &--item {
+            padding: 2rem;
+            box-shadow: $shadow-black-100;
+            border-radius: 1rem;
+            background-color: $black-000;
+            margin: 1.5rem;
+        }
+    }
+    &__img {
+
+
+        img{
+            width: 100%;
+        }
+    }
+    &__name{
+        color: $black-900;
+        font-size: 2rem;
+        padding: 1.5rem 0 .3rem;
+    }
+}

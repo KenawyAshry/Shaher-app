@@ -1,0 +1,14 @@
+{
+  "name": "landingapp",
+  "version": "1.0.0",
+  "description": "landing page Shaher app",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "author": "kenawy",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^5.0.0"
+  }
+}
